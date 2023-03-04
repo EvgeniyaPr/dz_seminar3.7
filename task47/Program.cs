@@ -43,4 +43,3 @@ System.Console.WriteLine();
 var myMatrix = GenerateMatrix(rows, cols);
 PrintMatrix(myMatrix);
 
-//  Math.Round(rand.Next(3, 4) + rand.NextDouble() * 100, 2);

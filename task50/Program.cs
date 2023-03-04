@@ -39,8 +39,24 @@ void PrintMatrix(int[,] matrix)
     }
 }
 
+void findElement(int[,] matr, int rowNumber, int colNumber)
+{
+    if(rowNumber <= matr.GetLength(0) && colNumber <= matr.GetLength(1))
+    {
+        System.Console.WriteLine($"Искомый элемент {matr[rowNumber -1, colNumber -1]}");
+    }
+    else
+    {
+        System.Console.WriteLine("Такого элемента нет в массиве.");
+    }
+}
+
 int rows = ReadInt("Введите колчество строк матрицы: ");
-int cols = ReadInt("Введите колчество столбцов матрицы:");
-System.Console.WriteLine();
+int cols = ReadInt("Введите колчество столбцов матрицы: ");
 var myMatrix = GenerateMatrix(rows, cols);
+
+int rowNumber = ReadInt("Введите номер строки матрицы: ");
+int colNumber = ReadInt("Введите номер столбца матрицы: ");
+
 PrintMatrix(myMatrix);
+findElement(myMatrix, rowNumber, colNumber);
